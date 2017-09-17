@@ -1,0 +1,38 @@
+---
+- hosts: apache
+  become: true
+  gather_facts: no
+  vars:
+       package: python
+       domain: ec2-34-232-231-194.compute-1.amazonaws.com
+       http_port: 80
+  tasks:
+         - name: install python
+           apt: name={{ package }} state=latest
+
+         - name: install apache2
+           apt: name=apache2 state=latest
+           become: yes
+
+         - name: enabled mod_rewrite
+           apache2_module: name=rewrite state=present
+           notify:
+              - restart apache2
+
+         - name: create virtual host file
+           template: src=virtualhost.conf dest=/etc/apache2/sites-available/{{ domain }}.conf
+
+         - name: enable the virtual host
+           command: a2ensite {{ domain }}
+           args:
+               creates: /etc/apache2/sites-enabled/{{ domain }}.conf
+           notify:
+              - restart apache2
+         
+         - name: Set up HTML file
+           copy: src=/home/anu/ansible-apache/hello_world.html dest=/var/www/html/index.html owner=www-data group=www-data mode=0644
+
+ 
+  handlers:
+         - name: restart apache2
+           service: name=apache2 state=restarted

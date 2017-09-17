@@ -1,0 +1,27 @@
+---
+- hosts: apache
+  become: true
+  vars:
+       package: python
+       domain: ec2-34-232-231-194.compute-1.amazonaws.com
+       http_port: 80
+  tasks:
+   - name: Disable mod_rewrite
+     command: a2dismod rewrite
+     become: yes
+    
+   - name: Disable and remove virtual host
+     command: a2dissite {{ domain }}
+     args:
+         removes: /etc/apache2/sites-enabled/{{ domain }}.conf
+    
+   - name: Uninstall apache packages
+     apt: >
+      
+        pkg={{ item }}
+        state=absent
+        purge=yes
+        force=yes
+     with_items:
+       - apache2*
+     become: yes
