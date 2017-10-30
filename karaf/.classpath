@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Final/src/main/java"/>
+	<classpathentry kind="src" path="Final/src/test/java"/>
+	<classpathentry kind="lib" path="Final/target/test-bundles/blueprintrestbeanorderservicetest-1509323333766.jar"/>
+	<classpathentry kind="lib" path="Final/target/test-bundles/blueprintrestbeanorderservicetest-1509323339872.jar"/>
+	<classpathentry kind="lib" path="Final/target/test-bundles/configAdminInitBundle-1509323333766.jar"/>
+	<classpathentry kind="lib" path="Final/target/test-bundles/configAdminInitBundle-1509323339872.jar"/>
+	<classpathentry kind="output" path="Final/target/classes"/>
+</classpath>
