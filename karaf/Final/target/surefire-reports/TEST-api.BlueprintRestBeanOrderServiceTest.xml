@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="api.ApiServiceTest" time="3.711" tests="3" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
+    <property name="java.vm.version" value="25.144-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\cygwin64\home\anuks"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\cygwin64\home\anuks"/>
+    <property name="java.runtime.version" value="1.8.0_144-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\cygwin64\tmp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_144\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\cygwin64\usr\local\bin;C:\cygwin64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY;C:\Program Files\apache\bi;.;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\apache\bin;C:\Users\anuks\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="maven.conf" value="C:\Program Files\apache/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache\lib\jansi-native\windows64"/>
+    <property name="user.home" value="C:\Users\anuks"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="anuks"/>
+    <property name="java.class.path" value="C:\Program Files\apache\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_144\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_144"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testhome" classname="api.ApiServiceTest" time="3.711">
+    <error message="Failed to create route route14 at: &gt;&gt;&gt; Bean[ref:orderService method:testhome] &lt;&lt;&lt; in route: Route(route14)[[From[direct:testhome]] -&gt; [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@6e15fe2 of type: api.InitialService" type="org.apache.camel.FailedToCreateRouteException"><![CDATA[org.apache.camel.FailedToCreateRouteException: Failed to create route route14 at: >>> Bean[ref:orderService method:testhome] <<< in route: Route(route14)[[From[direct:testhome]] -> [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@6e15fe2 of type: api.InitialService
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1298)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.RuntimeCamelException: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@6e15fe2 of type: api.InitialService
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1774)
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@6e15fe2 of type: api.InitialService
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></error>
+    <system-out><![CDATA[2017-10-29 17:28:53,762 [main           ] INFO  CamelBlueprintHelper           - Using Blueprint XML file: /C:/cygwin64/home/anuks/api/target/classes/OSGI-INF/blueprint/rest-order.xml
+2017-10-29 17:28:53,793 [Thread-0       ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:53,814 [Thread-1       ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:54,078 [main           ] INFO  Activator                      - Camel activator starting
+2017-10-29 17:28:54,087 [main           ] INFO  Activator                      - Camel activator started
+Unable to start bundle: org.apache.cxf.cxf-rt-transports-http [31]
+2017-10-29 17:28:54,360 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.camel.camel-cxf-transport (13) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+2017-10-29 17:28:54,365 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (19) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+2017-10-29 17:28:54,365 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (21) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+2017-10-29 17:28:54,366 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (23) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+2017-10-29 17:28:54,367 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (24) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+2017-10-29 17:28:54,368 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (27) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+2017-10-29 17:28:54,370 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (28) [org.apache.cxf.wsdl.WSDLManager]
+2017-10-29 17:28:54,375 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (31) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+2017-10-29 17:28:54,376 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (36) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+2017-10-29 17:28:54,557 [int Extender: 1] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0, http://camel.apache.org/schema/blueprint/cxf, http://camel.apache.org/schema/blueprint]
+2017-10-29 17:28:54,949 [int Extender: 1] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:28:56,778 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:56,778 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing: testhome(api.ApiServiceTest)
+2017-10-29 17:28:56,778 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:56,779 [t Dispatcher: 1] INFO  BlueprintCamelContext          - Attempting to start Camel Context camel
+2017-10-29 17:28:56,795 [main           ] INFO  eprintRestBeanOrderServiceTest - Skipping starting CamelContext as system property skipStartingCamelContext is set to be true.
+2017-10-29 17:28:56,797 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is starting
+2017-10-29 17:28:56,798 [main           ] INFO  ManagedManagementStrategy      - JMX is enabled
+2017-10-29 17:28:57,064 [main           ] INFO  DefaultRuntimeEndpointRegistry - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2017-10-29 17:28:57,320 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutting down
+2017-10-29 17:28:57,340 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) uptime 0.543 seconds
+2017-10-29 17:28:57,340 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutdown in 0.018 seconds
+2017-10-29 17:28:57,340 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:57,340 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing done: testhome(api.ApiServiceTest)
+2017-10-29 17:28:57,341 [main           ] INFO  eprintRestBeanOrderServiceTest - Took: 0.545 seconds (545 millis)
+2017-10-29 17:28:57,341 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:57,349 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.cm/1.0.6
+2017-10-29 17:28:57,379 [int Extender: 2] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:28:57,382 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle BlueprintRestBeanOrderServiceTest/1.0.0
+2017-10-29 17:28:57,382 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.core/1.4.4
+2017-10-29 17:28:57,383 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint/2.19.3
+2017-10-29 17:28:57,384 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf/2.19.3
+2017-10-29 17:28:57,385 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport/2.19.3
+2017-10-29 17:28:57,392 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 36
+2017-10-29 17:28:57,392 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 13
+2017-10-29 17:28:57,392 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 19
+2017-10-29 17:28:57,392 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 21
+2017-10-29 17:28:57,392 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 23
+2017-10-29 17:28:57,393 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 24
+2017-10-29 17:28:57,393 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 27
+2017-10-29 17:28:57,393 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 28
+2017-10-29 17:28:57,393 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 31
+2017-10-29 17:28:57,394 [main           ] INFO  Activator                      - Camel activator stopping
+2017-10-29 17:28:57,395 [main           ] INFO  Activator                      - Camel activator stopped
+2017-10-29 17:28:57,396 [main           ] INFO  CamelBlueprintHelper           - Deleting work directory target/bundles/1509323333766
+]]></system-out>
+    <system-err><![CDATA[org.osgi.framework.BundleException: Unable to start bundle
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:163)
+	at org.apache.felix.connect.PojoSR.startBundles(PojoSR.java:304)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:248)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:129)
+	at org.apache.felix.connect.PojoServiceRegistryFactoryImpl.newPojoServiceRegistry(PojoServiceRegistryFactoryImpl.java:52)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:198)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:133)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:111)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.createBundleContext(CamelBlueprintTestSupport.java:127)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:241)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NoClassDefFoundError: org/osgi/service/http/HttpService
+	at org.apache.cxf.transport.http.osgi.HTTPTransportActivator.start(HTTPTransportActivator.java:63)
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:153)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: org.osgi.service.http.HttpService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 40 more
+]]></system-err>
+    <rerunError message="Failed to create route route28 at: &gt;&gt;&gt; Bean[ref:orderService method:testhome] &lt;&lt;&lt; in route: Route(route28)[[From[direct:testhome]] -&gt; [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@1941a8ff of type: api.InitialService" type="org.apache.camel.FailedToCreateRouteException"><![CDATA[org.apache.camel.FailedToCreateRouteException: Failed to create route route28 at: >>> Bean[ref:orderService method:testhome] <<< in route: Route(route28)[[From[direct:testhome]] -> [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@1941a8ff of type: api.InitialService
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1298)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.RuntimeCamelException: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@1941a8ff of type: api.InitialService
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1774)
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@1941a8ff of type: api.InitialService
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+      <system-out><![CDATA[2017-10-29 17:28:57,449 [main           ] INFO  CamelBlueprintHelper           - Using Blueprint XML file: /C:/cygwin64/home/anuks/api/target/classes/OSGI-INF/blueprint/rest-order.xml
+2017-10-29 17:28:57,457 [Thread-5       ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:57,461 [Thread-6       ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:57,572 [main           ] INFO  Activator                      - Camel activator starting
+2017-10-29 17:28:57,573 [main           ] INFO  Activator                      - Camel activator started
+Unable to start bundle: org.apache.cxf.cxf-rt-transports-http [31]
+2017-10-29 17:28:57,640 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.camel.camel-cxf-transport (13) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+2017-10-29 17:28:57,646 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (19) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+2017-10-29 17:28:57,647 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (21) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+2017-10-29 17:28:57,649 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (23) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+2017-10-29 17:28:57,651 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (24) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+2017-10-29 17:28:57,657 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (27) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+2017-10-29 17:28:57,659 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (28) [org.apache.cxf.wsdl.WSDLManager]
+2017-10-29 17:28:57,660 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (31) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+2017-10-29 17:28:57,663 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (36) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+2017-10-29 17:28:57,746 [int Extender: 1] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0, http://camel.apache.org/schema/blueprint/cxf, http://camel.apache.org/schema/blueprint]
+2017-10-29 17:28:57,804 [int Extender: 3] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:28:58,184 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:58,184 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing: testhome(api.ApiServiceTest)
+2017-10-29 17:28:58,185 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:58,186 [t Dispatcher: 1] INFO  BlueprintCamelContext          - Attempting to start Camel Context camel
+2017-10-29 17:28:58,187 [main           ] INFO  eprintRestBeanOrderServiceTest - Skipping starting CamelContext as system property skipStartingCamelContext is set to be true.
+2017-10-29 17:28:58,187 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is starting
+2017-10-29 17:28:58,188 [main           ] INFO  DefaultManagementStrategy      - JMX is disabled
+2017-10-29 17:28:58,250 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutting down
+2017-10-29 17:28:58,251 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) uptime 0.064 seconds
+2017-10-29 17:28:58,251 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutdown in 0.001 seconds
+2017-10-29 17:28:58,252 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:58,252 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing done: testhome(api.ApiServiceTest)
+2017-10-29 17:28:58,252 [main           ] INFO  eprintRestBeanOrderServiceTest - Took: 0.065 seconds (65 millis)
+2017-10-29 17:28:58,252 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:28:59,843 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.cm/1.0.6
+2017-10-29 17:28:59,848 [int Extender: 3] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:28:59,849 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle BlueprintRestBeanOrderServiceTest/1.0.0
+2017-10-29 17:28:59,850 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.core/1.4.4
+2017-10-29 17:28:59,851 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport/2.19.3
+2017-10-29 17:28:59,853 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint/2.19.3
+2017-10-29 17:28:59,854 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf/2.19.3
+2017-10-29 17:28:59,857 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 36
+2017-10-29 17:28:59,857 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 13
+2017-10-29 17:28:59,857 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 19
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 21
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 23
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 24
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 27
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 28
+2017-10-29 17:28:59,858 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 31
+2017-10-29 17:28:59,859 [main           ] INFO  Activator                      - Camel activator stopping
+2017-10-29 17:28:59,859 [main           ] INFO  Activator                      - Camel activator stopped
+2017-10-29 17:28:59,860 [main           ] INFO  CamelBlueprintHelper           - Deleting work directory target/bundles/1509323337449
+]]></system-out>
+      <system-err><![CDATA[org.osgi.framework.BundleException: Unable to start bundle
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:163)
+	at org.apache.felix.connect.PojoSR.startBundles(PojoSR.java:304)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:248)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:129)
+	at org.apache.felix.connect.PojoServiceRegistryFactoryImpl.newPojoServiceRegistry(PojoServiceRegistryFactoryImpl.java:52)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:198)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:133)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:111)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.createBundleContext(CamelBlueprintTestSupport.java:127)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:241)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NoClassDefFoundError: org/osgi/service/http/HttpService
+	at org.apache.cxf.transport.http.osgi.HTTPTransportActivator.start(HTTPTransportActivator.java:63)
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:153)
+	... 38 more
+]]></system-err>
+    </rerunError>
+    <rerunError message="Failed to create route route42 at: &gt;&gt;&gt; Bean[ref:orderService method:testhome] &lt;&lt;&lt; in route: Route(route42)[[From[direct:testhome]] -&gt; [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@5c153b9e of type: api.InitialService" type="org.apache.camel.FailedToCreateRouteException"><![CDATA[org.apache.camel.FailedToCreateRouteException: Failed to create route route42 at: >>> Bean[ref:orderService method:testhome] <<< in route: Route(route42)[[From[direct:testhome]] -> [Bean[ref:orderSer... because of org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@5c153b9e of type: api.InitialService
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1298)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.RuntimeCamelException: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@5c153b9e of type: api.InitialService
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1774)
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.camel.component.bean.MethodNotFoundException: Method with name: testhome not found on bean: api.InitialService@5c153b9e of type: api.InitialService
+	at org.apache.camel.model.BeanDefinition.createProcessor(BeanDefinition.java:327)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessorImpl(ProcessorDefinition.java:549)
+	at org.apache.camel.model.ProcessorDefinition.makeProcessor(ProcessorDefinition.java:510)
+	at org.apache.camel.model.ProcessorDefinition.addRoutes(ProcessorDefinition.java:226)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1295)
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:204)
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1087)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3540)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3271)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:202)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3089)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:3085)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3108)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3085)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3022)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:244)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:254)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+      <system-out><![CDATA[2017-10-29 17:28:59,868 [main           ] INFO  CamelBlueprintHelper           - Using Blueprint XML file: /C:/cygwin64/home/anuks/api/target/classes/OSGI-INF/blueprint/rest-order.xml
+2017-10-29 17:28:59,883 [Thread-9       ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:59,889 [Thread-10      ] INFO  RawBuilder                     - Copy thread finished.
+2017-10-29 17:28:59,996 [main           ] INFO  Activator                      - Camel activator starting
+2017-10-29 17:28:59,997 [main           ] INFO  Activator                      - Camel activator started
+Unable to start bundle: org.apache.cxf.cxf-rt-transports-http [31]
+2017-10-29 17:29:00,066 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.camel.camel-cxf-transport (13) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+2017-10-29 17:29:00,067 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (19) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+2017-10-29 17:29:00,067 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (21) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+2017-10-29 17:29:00,067 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (23) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+2017-10-29 17:29:00,070 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (24) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+2017-10-29 17:29:00,072 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (27) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+2017-10-29 17:29:00,073 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (28) [org.apache.cxf.wsdl.WSDLManager]
+2017-10-29 17:29:00,074 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (31) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+2017-10-29 17:29:00,075 [main           ] INFO  CXFActivator                   - Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (36) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+2017-10-29 17:29:00,123 [int Extender: 1] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0, http://camel.apache.org/schema/blueprint/cxf, http://camel.apache.org/schema/blueprint]
+2017-10-29 17:29:00,201 [int Extender: 2] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:29:00,480 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:29:00,480 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing: testhome(api.ApiServiceTest)
+2017-10-29 17:29:00,480 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:29:00,480 [t Dispatcher: 1] INFO  BlueprintCamelContext          - Attempting to start Camel Context camel
+2017-10-29 17:29:00,481 [main           ] INFO  eprintRestBeanOrderServiceTest - Skipping starting CamelContext as system property skipStartingCamelContext is set to be true.
+2017-10-29 17:29:00,482 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is starting
+2017-10-29 17:29:00,482 [main           ] INFO  DefaultManagementStrategy      - JMX is disabled
+2017-10-29 17:29:00,549 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutting down
+2017-10-29 17:29:00,551 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) uptime 0.070 seconds
+2017-10-29 17:29:00,552 [main           ] INFO  BlueprintCamelContext          - Apache Camel 2.19.3 (CamelContext: camel) is shutdown in 0.002 seconds
+2017-10-29 17:29:00,552 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:29:00,552 [main           ] INFO  eprintRestBeanOrderServiceTest - Testing done: testhome(api.ApiServiceTest)
+2017-10-29 17:29:00,552 [main           ] INFO  eprintRestBeanOrderServiceTest - Took: 0.071 seconds (71 millis)
+2017-10-29 17:29:00,554 [main           ] INFO  eprintRestBeanOrderServiceTest - ********************************************************************************
+2017-10-29 17:29:02,193 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.cm/1.0.6
+2017-10-29 17:29:02,195 [int Extender: 1] INFO  BlueprintContainerImpl         - Bundle BlueprintRestBeanOrderServiceTest/1.0.0 is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0]
+2017-10-29 17:29:02,196 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle BlueprintRestBeanOrderServiceTest/1.0.0
+2017-10-29 17:29:02,196 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.aries.blueprint.core/1.4.4
+2017-10-29 17:29:02,197 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf/2.19.3
+2017-10-29 17:29:02,197 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport/2.19.3
+2017-10-29 17:29:02,197 [main           ] INFO  BlueprintExtender              - Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint/2.19.3
+2017-10-29 17:29:02,201 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 36
+2017-10-29 17:29:02,201 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 13
+2017-10-29 17:29:02,201 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 19
+2017-10-29 17:29:02,202 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 21
+2017-10-29 17:29:02,202 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 23
+2017-10-29 17:29:02,202 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 24
+2017-10-29 17:29:02,202 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 27
+2017-10-29 17:29:02,202 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 28
+2017-10-29 17:29:02,204 [main           ] INFO  CXFActivator                   - Removing the extensions for bundle 31
+2017-10-29 17:29:02,207 [main           ] INFO  Activator                      - Camel activator stopping
+2017-10-29 17:29:02,207 [main           ] INFO  Activator                      - Camel activator stopped
+2017-10-29 17:29:02,208 [main           ] INFO  CamelBlueprintHelper           - Deleting work directory target/bundles/1509323339872
+]]></system-out>
+      <system-err><![CDATA[org.osgi.framework.BundleException: Unable to start bundle
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:163)
+	at org.apache.felix.connect.PojoSR.startBundles(PojoSR.java:304)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:248)
+	at org.apache.felix.connect.PojoSR.<init>(PojoSR.java:129)
+	at org.apache.felix.connect.PojoServiceRegistryFactoryImpl.newPojoServiceRegistry(PojoServiceRegistryFactoryImpl.java:52)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:198)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:133)
+	at org.apache.camel.test.blueprint.CamelBlueprintHelper.createBundleContext(CamelBlueprintHelper.java:111)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.createBundleContext(CamelBlueprintTestSupport.java:127)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:241)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:183)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NoClassDefFoundError: org/osgi/service/http/HttpService
+	at org.apache.cxf.transport.http.osgi.HTTPTransportActivator.start(HTTPTransportActivator.java:63)
+	at org.apache.felix.connect.PojoSRBundle.start(PojoSRBundle.java:153)
+	... 38 more
+]]></system-err>
+    </rerunError>
+  </testcase>
+</testsuite>

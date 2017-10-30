@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+           xsi:schemaLocation="
+             http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+             http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+             http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+             http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://svn.apache.org/repos/asf/aries/trunk/blueprint/blueprint-cm/src/main/resources/org/apache/aries/blueprint/compendium/cm/blueprint-cm-1.1.0.xsd
+             ">
+ <!-- Anu Sebastian's code -->
+  <!-- the Initial order service -->
+  <bean id="ApiService" class="api.InitialService" init-method="setupInitialOrders"/>
+ 
+  <!-- enable json support -->
+  <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+
+  <cm:property-placeholder persistent-id="Tcfg" update-strategy="reload" >
+        <cm:default-properties>
+          
+            <cm:property name="cKey" value="l6uU4Cm5Zjioyb69ruf3QYmLy"/>
+            <cm:property name="cSecret" value="Zv9Pq7Qc6b8ZPToEsC2DVKimvth61yeDZe998xevsNgHKUcjiH"/>
+            <cm:property name="aToken" value="917646817046626304-glMTvt4ViNMaBYcMcXMDGZdnv9QVbwu"/>
+            <cm:property name="aSecret" value="BzwNM3JeoCzWsmSwmNj7HWk40rc7pwBhSjg8wNubP5tsj"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+  <!-- CXF-RS server as a bean where we setup the REST web service using the resource class
+       and can do additional configurations -->
+  <cxf:rsServer id="RestApiOrderServer" address="http://localhost:8080"
+                serviceClass="api.RestApiOrderService">
+    <cxf:providers>
+      <ref component-id="jsonProvider" />
+    </cxf:providers>
+  </cxf:rsServer>
+  
+        <bean id="Tcfg" class="api.Config">
+          <property name="cKey" value="${cKey}"/>
+          <property name="cSecret" value="${cSecret}"/>
+          <property name="aToken" value="${aToken}"/>
+          <property name="aSecret" value="${aSecret}"/>
+      </bean>
+
+  <camelContext id="camel" xmlns="http://camel.apache.org/schema/blueprint">
+
+    <route>
+      <!-- In order to enable a simple binding style we use the cxfrs:bean in the below code snippet -->
+      <from uri="cxfrs:bean:RestApiOrderServer?bindingStyle=SimpleConsumer"/>
+      <!-- call the route based on the operation invoked on the REST web service -->
+      <toD uri="direct:${header.operationName}"/>
+    </route>
+
+    <!-- These routes are to implement the REST API calls and services -->
+    <route>
+      <from uri="direct:getOrder"/>
+      <bean ref="ApiService" method="getOrder(${header.id})"/>
+    </route>
+ 
+ <route>
+      <from uri="direct:getOrders"/>
+      <bean ref="ApiService" method="getOrders"/>
+    </route>
+    
+    <route>
+      <from uri="direct:getHomeTimeline"/>
+      <bean ref="ApiService" method="getHomeTimeline"/>
+    </route>
+    
+ <!-- Saloni Bhalerao -->   
+     <route>
+      <from uri="direct:getTwitterAPITimeline"/>
+      <bean ref="ApiService" method="getTwitterAPITimeline"/>
+    </route>
+    
+     <route>
+      <from uri="direct:getUserTimeLine"/>
+      <bean ref="ApiService" method="getUserTimeLine"/>
+    </route>
+    
+    <route>
+      <from uri="direct:getFriendsList"/>
+      <bean ref="ApiService" method="getFriendsList"/>
+    </route>
+    
+     <!--  Tarun shetty-->
+      <route>
+      <from uri="direct:getFriendsShow"/>
+      <bean ref="ApiService" method="getFriendsShow"/>
+    </route>
+    
+      <route>
+      <from uri="direct:getDMEventList"/>
+      <bean ref="ApiService" method="getDMEventList"/>
+    </route>
+    
+     <route>
+      <from uri="direct:getAccoutSettings"/>
+      <bean ref="ApiService" method="getAccoutSettings"/>
+    </route>
+    
+     <route>
+      <from uri="direct:getFollowersList"/>
+      <bean ref="ApiService" method="getFollowersList"/>
+    </route>
+    <!--  Hemambujam Veeraraghavan -->
+     <route>
+      <from uri="direct:getPolicy"/>
+      <bean ref="ApiService" method="getPolicy"/>
+    </route>
+    
+    <route>
+      <from uri="direct:getToS"/>
+      <bean ref="ApiService" method="getToS"/>
+    </route>
+    
+    <route>
+      <from uri="direct:testhome"/>
+      <bean ref="ApiService" method="testhome"/>
+    </route>
+  </camelContext>
+
+</blueprint>
