@@ -1,0 +1,7 @@
+SITENAME=4Spartans-Developer Page-PasteForLink.com
+BASEURL=http:\/\/127.0.0.1\/
+DBHOST=thebookblogreview.cdlayufxcodw.us-east-1.rds.amazonaws.com
+DBNAME=project
+DBUSER=testuser
+DBPASS=Test1234
+CAPTCHA=false

@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: thebookblogreview.cdlayufxcodw.us-east-1.rds.amazonaws.com
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: Test1234
+
+  paste:
+    depends_on:
+      - db
+    image: paste
+    env_file:
+      docker/paste-envvars.txt
+    ports:
+      - 80:80
+
+volumes:
+  db_data:

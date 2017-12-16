@@ -1,0 +1,7 @@
+SITENAME=Welcome Developer!
+BASEURL=http:\/\/34.228.134.16\/
+DBHOST=thebookblogreview.cdlayufxcodw.us-east-1.rds.amazonaws.com
+DBNAME=project
+DBUSER=testuser
+DBPASS=Test1234
+CAPTCHA=false
